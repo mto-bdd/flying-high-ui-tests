@@ -11,11 +11,11 @@ import cucumber.api.java.en.Then;
 public class FeaturedDestinationSteps {
 
 
-    @Then("^(she|he) should see $featuredCount featured destinations")
+    @Then("^(she|he) should see (d+) featured destinations$")
     public void shouldSeeFeaturedDestinations(int featuredCount) {
     }
 
-    @Then("^the featured destinations should include $expectedDestination costing $price$")
+    @Then("^the featured destinations should include (.*) costing (d+)$")
     public void featuredDestinationsShouldInclude(String expectedDestination, int price) {
     }
 }

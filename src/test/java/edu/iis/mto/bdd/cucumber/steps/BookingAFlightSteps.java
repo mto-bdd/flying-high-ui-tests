@@ -9,7 +9,7 @@ import cucumber.api.java.en.When;
 public class BookingAFlightSteps {
 
   
-    @Given("I want to book a flight")
+    @Given("^I want to book a flight$")
     public void givenIWantToBookAFlight() {
     }
 
@@ -26,7 +26,7 @@ public class BookingAFlightSteps {
     public void enterFromPrefix(String prefix) {
     }
 
-    @Then("^I should see the following cities: $expectedCities$")
+    @Then("^I should see the following cities:$")
     public void shouldSeeCities(List<String> expectedCities) {
 
     }

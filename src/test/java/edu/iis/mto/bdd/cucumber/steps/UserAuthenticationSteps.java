@@ -8,22 +8,22 @@ import edu.iis.mto.bdd.model.FrequentFlyerMember;
 public class UserAuthenticationSteps {
 
 
-    @Given("^$user is a registered Frequent Flyer$")
+    @Given("^(.*) is a registered Frequent Flyer$")
     public void givenARegisteredFrequentFlyer(FrequentFlyerMember user) {}
 
-    @When("^$user authenticates with a valid email address and password$")
+    @When("^(.*) authenticates with a valid email address and password$")
     public void whenJaneAuthenticatesWithAValidEmailAddressAndPassword(FrequentFlyerMember user) {
     }
 
-    @Then("^$user should be given access to (her|his) account$")
+    @Then("^(.*) should be given access to (her|his) account$")
     public void thenTheUserShouldBeGivenAccessToAccount(FrequentFlyerMember user) {
     }
 
-    @Given("^$user has logged on$")
+    @Given("^(.*) has logged on$")
     public void aUserHasLoggedOnAs(FrequentFlyerMember user) {
     }
 
-    @When("^$user views the home page$")
+    @When("^(.*) views the home page$")
     public void whenAUserViewsTheHomePage() {}
 
 }
