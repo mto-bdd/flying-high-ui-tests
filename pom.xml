@@ -70,6 +70,11 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>net.serenity-bdd.maven.plugins</groupId>
+				<artifactId>serenity-maven-plugin</artifactId>
+				<version>${serenity.version}</version>
+			</plugin>
 		</plugins>
 	</build>
 </project>
