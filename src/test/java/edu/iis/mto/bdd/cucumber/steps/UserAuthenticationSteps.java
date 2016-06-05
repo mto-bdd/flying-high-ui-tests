@@ -15,7 +15,7 @@ public class UserAuthenticationSteps {
     public void whenJaneAuthenticatesWithAValidEmailAddressAndPassword(FrequentFlyerMember user) {
     }
 
-    @Then("^(.*) should be given access to (her|his) account$")
+    @Then("^(.*) should be given access to (?:her|his) account$")
     public void thenTheUserShouldBeGivenAccessToAccount(FrequentFlyerMember user) {
     }
 
@@ -23,7 +23,7 @@ public class UserAuthenticationSteps {
     public void aUserHasLoggedOnAs(FrequentFlyerMember user) {
     }
 
-    @When("^(.*) views the home page$")
+    @When("^(?:.*) views the home page$")
     public void whenAUserViewsTheHomePage() {}
 
 }

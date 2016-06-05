@@ -11,7 +11,7 @@ import cucumber.api.java.en.Then;
 public class FeaturedDestinationSteps {
 
 
-    @Then("^(she|he) should see ([0-9]+) featured destinations$")
+    @Then("^(?:she|he) should see ([0-9]+) featured destinations$")
     public void shouldSeeFeaturedDestinations(int featuredCount) {
     }
 
