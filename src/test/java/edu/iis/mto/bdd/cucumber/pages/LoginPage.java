@@ -18,6 +18,6 @@ public class LoginPage {
 	public void signinWithCredentials(String userEmail, String userPassword) {
 		driver.findElement(By.name("email")).sendKeys(userEmail);
 		driver.findElement(By.name("password")).sendKeys(userPassword);
-		driver.findElement(By.id("signin")).click();
+		driver.findElement(By.name("signin")).click();
 	}
 }
