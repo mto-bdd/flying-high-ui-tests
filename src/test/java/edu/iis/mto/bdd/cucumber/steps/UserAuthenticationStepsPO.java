@@ -19,11 +19,11 @@ public class UserAuthenticationStepsPO {
 	private final WebDriver driver = new FirefoxDriver();
 	private LoginPageWebDriver loginPage;
 
-	@Given("^(.*) is a registered Frequent Flyer$")
+//	@Given("^(.*) is a registered Frequent Flyer$")
 	public void givenARegisteredFrequentFlyer(FrequentFlyerMember user) {
 	}
 
-	@When("^(.*) authenticates with a valid email address and password$")
+//	@When("^(.*) authenticates with a valid email address and password$")
 	public void whenJaneAuthenticatesWithAValidEmailAddressAndPassword(FrequentFlyerMember user) {
 		loginPage = new LoginPageWebDriver(driver);
 		loginPage.open();
@@ -31,7 +31,7 @@ public class UserAuthenticationStepsPO {
 
 	}
 
-	@Then("^(.*) should be given access to (?:her|his) account$")
+//	@Then("^(.*) should be given access to (?:her|his) account$")
 	public void thenTheUserShouldBeGivenAccessToAccount(FrequentFlyerMember user) {
 		HomePageWebDriver homepage = new HomePageWebDriver(driver);
 
@@ -39,14 +39,14 @@ public class UserAuthenticationStepsPO {
 
 	}
 
-	@Given("^(.*) has logged on$")
+//	@Given("^(.*) has logged on$")
 	public void aUserHasLoggedOnAs(FrequentFlyerMember user) {
 		loginPage = new LoginPageWebDriver(driver);
 		loginPage.open();
 		loginPage.signinWithCredentials(user.getEmail(), user.getPassword());
 	}
 
-	@When("^(?:.*) views the home page$")
+//	@When("^(?:.*) views the home page$")
 	public void whenAUserViewsTheHomePage() {
 	}
 

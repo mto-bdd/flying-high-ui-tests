@@ -15,10 +15,10 @@ import edu.iis.mto.bdd.model.FrequentFlyerMember;
 public class UserAuthenticationSteps {
 	private final WebDriver driver = new FirefoxDriver();
 	
- //   @Given("^(.*) is a registered Frequent Flyer$")
+    @Given("^(.*) is a registered Frequent Flyer$")
     public void givenARegisteredFrequentFlyer(FrequentFlyerMember user) {}
 
- //   @When("^(.*) authenticates with a valid email address and password$")
+    @When("^(.*) authenticates with a valid email address and password$")
     public void whenJaneAuthenticatesWithAValidEmailAddressAndPassword(FrequentFlyerMember user) {
     	driver.get("http://localhost:8080/#/welcome");
     	driver.findElement(By.name("email")).sendKeys(user.getEmail());
@@ -27,13 +27,13 @@ public class UserAuthenticationSteps {
 		
     }
 
- //   @Then("^(.*) should be given access to (?:her|his) account$")
+    @Then("^(.*) should be given access to (?:her|his) account$")
     public void thenTheUserShouldBeGivenAccessToAccount(FrequentFlyerMember user) {
     	assertThat(driver.findElement(By.id("welcome-message")).getText(), equalTo("Witaj " + user.getFirstName()));
     	
     }
 
-  //  @Given("^(.*) has logged on$")
+    @Given("^(.*) has logged on$")
     public void aUserHasLoggedOnAs(FrequentFlyerMember user) {
     	driver.get("http://localhost:8080/#/welcome");
     	driver.findElement(By.name("email")).sendKeys(user.getEmail());
@@ -41,7 +41,7 @@ public class UserAuthenticationSteps {
 		driver.findElement(By.id("signin")).click();
     }
 
- //   @When("^(?:.*) views the home page$")
+    @When("^(?:.*) views the home page$")
     public void whenAUserViewsTheHomePage() {}
 
 }

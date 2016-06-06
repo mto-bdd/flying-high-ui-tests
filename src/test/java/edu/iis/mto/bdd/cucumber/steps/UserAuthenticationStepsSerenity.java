@@ -5,7 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import edu.iis.mto.bdd.cucumber.workflowsteps.AuthenticationWorkFlowSteps;
 import edu.iis.mto.bdd.model.FrequentFlyerMember;
-//import net.thucydides.core.annotations.Steps;
+import net.thucydides.core.annotations.Steps;
 
 public class UserAuthenticationStepsSerenity {
 	//@Steps
@@ -15,22 +15,22 @@ public class UserAuthenticationStepsSerenity {
 	public void givenARegisteredFrequentFlyer(FrequentFlyerMember user) {
 	}
 
-//	@When("^(.*) authenticates with a valid email address and password$")
+	//@When("^(.*) authenticates with a valid email address and password$")
 	public void whenJaneAuthenticatesWithAValidEmailAddressAndPassword(FrequentFlyerMember user) {
 		authenticationWorkFlow.enterEmailAndPasswordFor(user);
 	}
 
-//	@Then("^(.*) should be given access to (?:her|his) account$")
+	//@Then("^(.*) should be given access to (?:her|his) account$")
 	public void thenTheUserShouldBeGivenAccessToAccount(FrequentFlyerMember user) {
 		authenticationWorkFlow.verifyWelcomeMessageFor(user);
 	}
 
-//	@Given("^(.*) has logged on$")
+	//@Given("^(.*) has logged on$")
 	public void aUserHasLoggedOnAs(FrequentFlyerMember user) {
 		authenticationWorkFlow.enterEmailAndPasswordFor(user);
 	}
 
-//	@When("^(?:.*) views the home page$")
+	//@When("^(?:.*) views the home page$")
 	public void whenAUserViewsTheHomePage() {
 	}
 
