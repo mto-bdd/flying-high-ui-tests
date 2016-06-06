@@ -38,7 +38,7 @@ public class UserAuthenticationSteps {
     	driver.get("http://localhost:8080/#/welcome");
     	driver.findElement(By.name("email")).sendKeys(user.getEmail());
 		driver.findElement(By.name("password")).sendKeys(user.getPassword());
-		driver.findElement(By.id("signin")).click();
+		driver.findElement(By.name("signin")).click();
     }
 
     @When("^(?:.*) views the home page$")
