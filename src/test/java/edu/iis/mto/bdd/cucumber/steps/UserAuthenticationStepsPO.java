@@ -8,9 +8,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import edu.iis.mto.bdd.cucumber.pages.LoginPage;
 import edu.iis.mto.bdd.model.FrequentFlyerMember;
 
-public class UserAuthenticationSteps {
+public class UserAuthenticationStepsPO {
 	private final WebDriver driver = new FirefoxDriver();
 	
     @Given("^(.*) is a registered Frequent Flyer$")
@@ -18,10 +19,9 @@ public class UserAuthenticationSteps {
 
     @When("^(.*) authenticates with a valid email address and password$")
     public void whenJaneAuthenticatesWithAValidEmailAddressAndPassword(FrequentFlyerMember user) {
-    	driver.get("http://localhost:8080/#/welcome");
-    	driver.findElement(By.name("email")).sendKeys(user.getEmail());
-		driver.findElement(By.name("password")).sendKeys(user.getPassword());
-		driver.findElement(By.id("signin")).click();
+    	LoginPage loginPage = new LoginPage(driver);
+    	loginPage.open();
+    	loginPage.signinWithCredentials(user.getEmail(), user.getPassword());
 		
     }
 
