@@ -1,3 +1,4 @@
+@authentication
 Feature: User Authentication
 In order to prevent unauthorized use of member points
 As the system admin

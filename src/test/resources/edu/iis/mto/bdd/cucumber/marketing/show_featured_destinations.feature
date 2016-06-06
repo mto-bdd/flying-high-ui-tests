@@ -1,3 +1,4 @@
+@feat-destinations
 Feature: Booking a flight
 In order to encourage travellers to travel more
 As an airline

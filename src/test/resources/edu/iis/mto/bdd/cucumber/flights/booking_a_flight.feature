@@ -1,3 +1,4 @@
+@booking
 Feature: Booking a flight
 In order to travel to my destination
 As a traveller
