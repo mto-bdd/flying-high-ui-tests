@@ -8,13 +8,15 @@ import edu.iis.mto.bdd.model.FrequentFlyerMember;
 import net.thucydides.core.annotations.Steps;
 
 public class UserAuthenticationStepsSerenity {
-	//@Steps
-	AuthenticationWorkFlowSteps authenticationWorkFlow;
+	
 
 	//@Given("^(.*) is a registered Frequent Flyer$")
 	public void givenARegisteredFrequentFlyer(FrequentFlyerMember user) {
 	}
 
+	@Steps
+	AuthenticationWorkFlowSteps authenticationWorkFlow;
+	
 	//@When("^(.*) authenticates with a valid email address and password$")
 	public void whenJaneAuthenticatesWithAValidEmailAddressAndPassword(FrequentFlyerMember user) {
 		authenticationWorkFlow.enterEmailAndPasswordFor(user);

@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(plugin = { "pretty",
-		"html:target/cucumber" }, glue = "edu.iis.mto.bdd.cucumber.steps")
+		"html:target/cucumber" },  tags = {"@authentication"}, glue = "edu.iis.mto.bdd.cucumber.steps")
 public class AcceptanceTestsSuite {
 
 }
