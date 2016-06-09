@@ -22,33 +22,31 @@ public class UserAuthenticationStepsFragile {
 		driver = new FirefoxDriver();
 	}
 	
-   // @Given("^(.*) is a registered Frequent Flyer$")
+    @Given("^(.*) is a registered Frequent Flyer$")
     public void givenARegisteredFrequentFlyer(String userEmail) {}
 
-    //@When("^(.*) authenticates with a valid and password$")
-    public void whenJaneAuthenticatesWithAValidEmailAddressAndPassword(String userEmail) {
+    @When("^(.*) authenticates with a valid email address and password$")
+    public void whenJaneAuthenticatesWithAValidEmailAddressAndPassword(String user) {
     	driver.get("http://localhost:8080/#/welcome");
-    	driver.findElement(By.name("email")).sendKeys(userEmail);
+    	driver.findElement(By.name("email")).sendKeys("janina.kowalska@acme.com");
 		driver.findElement(By.name("password")).sendKeys("s3cr3t");
 		driver.findElement(By.name("signin")).click();
-		
     }
 
-    //@Then("^(.*) should be given access to (?:her|his) account$")
+    @Then("^(.*) should be given access to (?:her|his) account$")
     public void thenTheUserShouldBeGivenAccessToAccount(String userName) {
-    	assertThat(driver.findElement(By.id("welcome-message")).getText(), equalTo("Witaj " + userName));
-    	
+    	assertThat(driver.findElement(By.id("welcome-message")).getText(), equalTo("Witaj Janina"));    	
     }
 
-    //@Given("^(.*) has logged on$")
-    public void aUserHasLoggedOnAs(String userEmail) {
+    @Given("^(.*) has logged on$")
+    public void aUserHasLoggedOnAs(String user) {
     	driver.get("http://localhost:8080/#/welcome");
-    	driver.findElement(By.name("email")).sendKeys(userEmail);
+    	driver.findElement(By.name("email")).sendKeys("janina.kowalska@acme.com");
 		driver.findElement(By.name("password")).sendKeys("s3cr3t");
 		driver.findElement(By.name("signin")).click();
     }
 
-    //@When("^(?:.*) views the home page$")
+    @When("^(?:.*) views the home page$")
     public void whenAUserViewsTheHomePage() {}
     
     @After
